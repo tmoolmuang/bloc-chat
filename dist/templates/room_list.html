@@ -1,0 +1,10 @@
+<div ng-controller="RoomListController as room_list">
+	<a ui-sref="home"><img src="/assets/images/bloc-chat.png"></a>
+	<div class="room-list-window">
+		<table>
+			<tr ng-repeat="room in room_list.roomList">
+				<td class="room-name"><a ui-sref="room({roomId: room.$id})">{{room.$value}}</a></td>
+			</tr>
+		</table>
+	</div>	
+</div>

@@ -2,11 +2,18 @@
 <html ng-app="blocChat">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Bloc Base Project</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <title>Bloc Chat</title>
+		<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
 <body>
-    <script src="/scripts/app.js"></script>
+		<div class="container">
+			<ng-include class="room-list-container" src="'/templates/room_list.html'"></ng-include>
+			<ui-view></ui-view>
+			<ng-include class="side-container" src="'/templates/side.html'"></ng-include>
+		</div>	
+			
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
@@ -20,6 +27,12 @@
         messagingSenderId: "955000975581"
       };
       firebase.initializeApp(config);
-</script>
+		</script>
+		<script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/HomeController.js"></script>
+		<script src="/scripts/controllers/RoomListController.js"></script>
+		<script src="/scripts/controllers/RoomController.js"></script>
+		<script src="/scripts/controllers/SideController.js"></script>
+		<script src="/scripts/services/RoomService.js"></script>    
 </body>
 </html>

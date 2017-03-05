@@ -6,21 +6,19 @@
         requireBase: false
       });
     $stateProvider
-      .state('landing', {
+      .state('home', {
         url: '/',
-        controller: 'LandingCtrl as landing',
-        templateUrl: '/templates/landing.html'
+        controller: 'HomeController as home',
+        templateUrl: '/templates/home.html'
+      })
+      .state('room', {
+        url: '/room',
+        controller: 'RoomController as room',
+        templateUrl: '/templates/room.html',
+				params: {
+    			roomId: null
+  			}
       });
-      // .state('album', {
-      //   url: '/album',
-      //   controller: 'AlbumCtrl as album',
-      //   templateUrl: '/templates/album.html'
-      // })
-      // .state('collection', {
-      //   url: '/collection',
-      //   controller: 'CollectionCtrl as collection',
-      //   templateUrl: '/templates/collection.html'
-      // });
   }
   angular
     .module('blocChat', ['firebase', 'ui.router'])
