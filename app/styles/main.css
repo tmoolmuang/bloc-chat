@@ -3,7 +3,6 @@ body {
 	color: rgb(0, 0, 100);
 }
 .container {
-	width: 90%;
 	height: 500px;
 	border-radius: 10px;
   margin: 5px;
@@ -14,7 +13,7 @@ img {
 	margin: auto;
 }
 .room-list-container {
-  width: 15%;
+  width: 20%;
 	height: 100%;
   background-color: #ffdbb0;
 	text-align: center;
@@ -28,7 +27,7 @@ img {
 	float: left;
 }
 .side-container {
-  width: 15%;
+  width: 10%;
 	height: 100%;
   background-color: #ffdbb0;
 	float: left;
@@ -40,20 +39,29 @@ img {
 	width: 75%;
 	margin: auto;
 }
-.room-name {
+.room-list-data {
 	padding: 5px 0px 10px 10px;
+}
+.room-list-data a {
+	color: rgb(0, 0, 100);
+}
+.room-list-data a:link {
 	text-decoration: none;
 }
-.room-name a {
+.room-list-data a:active {
 	text-decoration: none;
 }
-.room-name a:visited {
+.room-list-data a:visited {
 	text-decoration: none;
 }
-.room-name a:hover {
+.room-list-data a:hover {
+	text-decoration: none;
 	font-weight: bold;
 }
 .chat-window, .home-window, .side-window {
-	width: 90%;
+	width: 80%;
 	margin: auto;
+}
+.btn-add {
+	margin-top: 5px;
 }
