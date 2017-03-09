@@ -2,7 +2,7 @@
 	function modalCtrlFunct(RoomService, $uibModalInstance) {
 		this.ok = function () {
 			$uibModalInstance.close(newRoom);
-			RoomService.addNewRoom(newRoom.value);
+			RoomService.addRoom(newRoom.value);
 			//switch immediately to new room?
 		};
 		this.cancel = function () {

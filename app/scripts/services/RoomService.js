@@ -1,9 +1,12 @@
 (function() {
   function RoomSvcFunct($firebaseArray) {
+		var RoomService = {};
     var ref = firebase.database().ref().child("rooms");
-    var rooms = $firebaseArray(ref);
+		var rooms = $firebaseArray(ref);
 		
-		var addRoom = function(newRoom) {			
+		RoomService.all = rooms;
+		
+		RoomService.addRoom = function(newRoom) {			
 			rooms.$add({name:newRoom})
 			.then(function(ref) {
   				var id = ref.key;
@@ -11,15 +14,11 @@
 			});						
 		};
 		
-		var getRoom = function(id) {
-			return $firebaseArray(ref.child(id));
+		RoomService.getRoom = function(id) {
+			return rooms.$getRecord(id);
 		};		
 		
-    return {
-      all: rooms,
-			addNewRoom: addRoom,
-			getRoomById: getRoom
-    };
+		return RoomService;
   }
 
   angular

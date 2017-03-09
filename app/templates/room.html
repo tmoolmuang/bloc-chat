@@ -1,6 +1,14 @@
 <div class="room-container">
 	<div class="chat-window">
-  	<p>{{room.roomId}}</p>
-<!--		<p>{{room.roomObj.name}}</p>-->
+		<h4 id="room-name">{{room.roomObj.name}}</h4>
 	</div>	
+	<div class="msg-list-window">
+		<table class="msg-list-table">
+			<tr class="msg-list-row" ng-repeat="message in room.messages">
+				<td class="msg-list-username">{{message.username}} :</td>
+				<td class="msg-list-content">{{message.content}}</td>
+				<td class="msg-list-date">{{message.sentAt}}</td>
+			</tr>		
+		</table>			
+	</div>
 </div>

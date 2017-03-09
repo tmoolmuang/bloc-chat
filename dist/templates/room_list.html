@@ -3,7 +3,7 @@
 	<div class="room-list-window">
 		<table class="room-list-table">
 			<tr class="room-list-row" ng-repeat="room in room_list.roomList">
-				<td class="room-list-data"><a ui-sref="room({roomId: room.$id})">{{room.name}}</a></td>
+				<td class="room-list-data"><a ui-sref="room({roomId: room.$id})" ui-sref-active="active">{{room.name}}</a></td>
 			</tr>		
 		</table>			
 	</div>
