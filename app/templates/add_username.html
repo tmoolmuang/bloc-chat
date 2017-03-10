@@ -1,0 +1,10 @@
+<div class="modal-header">
+    <h3 class="modal-title">Welcome</h3>
+</div>
+<div class="modal-body">
+	<input type="text" id="newUsername" placeholder="enter username" autofocus>
+	<span class="text-danger" ng-show="modal.warning">{{modal.warning}}</span>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary btn-sm" ng-click="modal.ok()">Add</button>
+</div>

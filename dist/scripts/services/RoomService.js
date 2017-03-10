@@ -10,7 +10,7 @@
 			rooms.$add({name:newRoom})
 			.then(function(ref) {
   				var id = ref.key;
-					rooms.$indexFor(id); // necessary?			
+					rooms.$indexFor(id); 	
 			});						
 		};
 		
