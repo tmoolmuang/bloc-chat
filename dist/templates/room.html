@@ -7,8 +7,12 @@
 			<tr class="msg-list-row" ng-repeat="message in room.messages">
 				<td class="msg-list-username">{{message.username}} :</td>
 				<td class="msg-list-content">{{message.content}}</td>
-				<td class="msg-list-date">{{message.sentAt}}</td>
+				<td class="msg-list-date">{{message.sentAt | date : 'short'}}</td>
 			</tr>		
 		</table>			
+	</div>
+	<div class="msg-send">
+		<input class="msg-msg" type="text" ng-model="newMessage">
+		<button class="btn btn-primary btn-sm btn-send" ng-click="room.sendMsg(newMessage)">Send</button>
 	</div>
 </div>

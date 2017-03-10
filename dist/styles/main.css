@@ -25,6 +25,7 @@ img {
 	height: 100%;
   background-color: #ffead1;
 	float: left;
+	position: relative;
 }
 .side-container {
   width: 10%;
@@ -102,4 +103,14 @@ img {
 	width: 25%;
 	text-align: right;
 	padding-right: 15px;
+	font-size: 0.8em;
+}
+.msg-msg {
+	width: 80%;
+}
+.msg-send {
+	position: absolute;
+	bottom: 3px;
+	left: 5px;
+	right: 0;
 }

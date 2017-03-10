@@ -3,6 +3,9 @@
 		var roomId = $stateParams.roomId;
 		this.roomObj = RoomService.getRoom(roomId);
 		this.messages = MessageService.getByRoomId(roomId);
+		this.sendMsg = function(newMessage) {
+			MessageService.send(newMessage, roomId);
+		}
 	}
 
 	angular
